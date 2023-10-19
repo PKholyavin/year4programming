@@ -3,228 +3,145 @@
 <title>Программирование лингвистических задач</title>
 
 <head>
-	<link rel="shortcut icon"
- href="images/snail.png">
-<style>
-body {
-  color: #000;
-  background: #fff;
-  font: 100% system-ui;
-}
-a {
-  color: #0033cc;
-}
+    <link rel="shortcut icon"
+    href="images/snail.png">
+    <style>
+        body {
+            color: #000;
+            background: #fff;
+            font: 100% system-ui;
+        }
+        a {
+            color: #0033cc;
+        }
 
-@media (prefers-color-scheme: dark) {
-  body {
-    color: #eee;
-    background: #121212;
+        @media (prefers-color-scheme: dark) {
+            body {
+                color: #eee;
+                background: #121212;
 
-  }
+            }
 
-  body a {
-    color: #809fff;
-  }
-}
+            body a {
+                color: #809fff;
+            }
+        }
 
- </style>
+    </style>
 </head>
 
 <body>
-    <table border="1" cellpadding="5">
-        <tr>
-            <th>Дата</th>
-            <th>Темы</th>
-            <th>Файлы</th>
-            <th>Задание</th>
-        </tr>
-        <tr>
-          <th colspan="4">Семестр 1</th>
-        </tr>
-        <tr>
-            <td><a href=https://colab.research.google.com/github/PKholyavin/year4programming/blob/main/0510.ipynb>05.10.2022</a></td>
-            <td>Чтение и запись файлов .wav: wav, wavio, scipy.io.wavfile</td>
-            <td>&#x1F512<a href="https://drive.google.com/file/d/1YGM4NxYwkBP98BmnRho2qvjPoKZxguRM/view?usp=share_link">n1fpt1.wav</a></td>
-            <td>Написать программу, которая считывает файл .wav, делит его пополам и записывает половинки в новый стереофайл, каждую половинку в свой канал.</td>
-	</tr>
-	<tr>
-            <td>12.10.2022</td>
-            <td>Кодировки текстовых файлов: cp1251, utf-8</td>
-            <td></td>
-            <td>Написать программу, которая изменяет кодировку текстового файла.</td>
-	</tr>
-        <tr>
-            <td><a href=https://colab.research.google.com/github/PKholyavin/year4programming/blob/main/1910.ipynb>19.10.2022</a></td>
-            <td>Устройство .seg-файла.<br>Работа с файловыми системами: os, glob</td>
-            <td>&#x1F512<a href="https://drive.google.com/file/d/1jiekRvVbuZ4V5ZWJaWlIMjNFitZIB8OG/view?usp=share_link">cta_seg.zip</a></td>
-            <td>Написать программу, которая обрабатывает все файлы .seg_* в директории и создаёт произносительный словарь.</td>
-	</tr>
-	<tr>
-            <td><a href=https://colab.research.google.com/github/PKholyavin/year4programming/blob/main/2610.ipynb>26.10.2022</a></td>
-            <td>Обработка сигнала окнами. Оконные фукнции.<br>Вычисление спектра сигнала. matplotlib</td>
-            <td></td>
-            <td>Написать программу, которая вычисляет динамическую спектрограмму и выводит её на экран.</td>
-	</tr>
-	<tr>
-            <td><a href=https://colab.research.google.com/github/PKholyavin/year4programming/blob/main/0211.ipynb>02.11.2022</a></td>
-            <td>Фильтры.<br>Вычисление интенсивности.</td>
-            <td><a href="intensity.png">intensity.png</a></td>
-            <td>Написать программу, которая вычисляет интенсивность звукового сигнала и выводит на экран график.</td>
-	</tr>
-	<tr>
-            <td><a href=https://colab.research.google.com/github/PKholyavin/year4programming/blob/main/0911.ipynb>09.11.2022</a></td>
-            <td>Аннотация .TextGrid.<br>Работа с метками периодов ОТ.</td>
-            <td>
-		    &#x1F512<a href="https://drive.google.com/file/d/1Oh_QTY6NdRqBQZGjRcMpvjKJlMrNNgG0/view?usp=share_link">cta0001.zip</a><br>
-		    &#x1F512<a href="https://drive.google.com/file/d/1YGM4NxYwkBP98BmnRho2qvjPoKZxguRM/view?usp=share_link">n1fpt1.wav</a><br>
-		    &#x1F512<a href="https://drive.google.com/file/d/1p9Ru5Dic9H0LGzQoCiWjBs_1N3mjqiCm/view?usp=share_link">n1fpt1.TextGrid</a><br>
-		    &#x1F512<a href="https://drive.google.com/file/d/1CRAkjwLhAXrSE7Jt39UBzQaDAjW9kPwD/view?usp=share_link">n1fpt1.PointProcess</a>
-            </td>
-            <td>Написать программу для преобразования .TextGrid и .PointProcess в .seg и наоборот. Вывести график ЧОТ на экран.</td>
-	</tr>
-	<tr>
-            <td><a href="https://colab.research.google.com/github/PKholyavin/year4programming/blob/main/1511.ipynb">15.11.2022</a></td>
-            <td>Z-нормализация<br>Вычисление длительности сегментов</td>
-            <td>&#x1F512<a href="https://drive.google.com/file/d/1jiekRvVbuZ4V5ZWJaWlIMjNFitZIB8OG/view?usp=share_link">cta_seg.zip</a><br><a href="result_example.png">result_example.png</a></td>
-            <td>Написать программу, которая вычисляет длительности звуков по файлу .seg, проводит z-нормализацию и записывает метки звуков и информацию о нормализованной длительности в файл .TextGrid</td>
-	</tr>
-  <tr>
-    <td><a href="2211.txt">22.11.2022</a></td>
-    <td>Детекция пауз</td>
-    <td></td>
-    <td>Написать программу, которая определяет паузы в речевом сигнале и отмечает их метками Praat или WaveAssistant</td>
-  </tr>
-  <tr>
-    <td><a href="https://colab.research.google.com/github/PKholyavin/year4programming/blob/main/2911.ipynb">29.11.2022</a></td>
-    <td>Автокорреляция</td>
-    <td></td>
-    <td>Написать программу, которая оценивает ЧОТ в сигнале с помощью функции автокорреляции</td>
-  </tr>
-  <tr>
-    <th colspan="4">Семестр 2</th>
-  </tr>
-  <tr>
-    <td><a href="https://colab.research.google.com/github/PKholyavin/year4programming/blob/main/1502.ipynb">15.02.2023</a></td>
-    <td>Основы matplotlib</td>
-    <td><a href=d07_s02_maps_tempo.txt>d07_s02_maps_tempo.txt</a></td>
-    <td>Построить графики на основе данных из таблицы</td>
-  </tr>
-  <tr>
-    <td><a href="https://colab.research.google.com/github/PKholyavin/year4programming/blob/main/1502_add.ipynb">15.02.2023</a></td>
-    <td>Доп. материал: чтение файлов csv</td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td><a href="https://colab.research.google.com/github/PKholyavin/year4programming/blob/main/2202.ipynb">01.03.2023</a></td>
-    <td>Токенизация<br>nltk</td>
-    <td></td>
-    <td>Написать программу, разбивающую текст на предложения и слова</td>
-  </tr>
-  <tr>
-    <td><a href="https://colab.research.google.com/github/PKholyavin/year4programming/blob/main/2203.ipynb">22.03.2023</a></td>
-    <td>Стемминг<br>Лемматизация</td>
-    <td></td>
-    <td>Написать стеммер для кратких и полных прилагательных</td>
-  </tr>
-  <tr>
-    <td><a href="https://en.wikipedia.org/wiki/Levenshtein_distance#Iterative_with_full_matrix">29.03.2023</a></td>
-    <td>Расстояние Левенштейна</td>
-    <td></td>
-    <td>Написать программу для вычисления расстояния Левенштейна</td>
-  </tr>
-  <tr>
-    <td><a href="https://colab.research.google.com/github/PKholyavin/year4programming/blob/main/0404.ipynb">04.04.2023</a></td>
-    <td>Исправление опечаток</td>
-    <td><a href=fontanka_freqs.txt>fontanka_freqs.txt</a></td>
-    <td>Написать программу для исправления опечаток в слове</td>
-  </tr>
-  <tr>
-    <td><a href="https://colab.research.google.com/github/PKholyavin/year4programming/blob/main/0504.ipynb">05.04.2023</a></td>
-    <td>N-граммы</td>
-    <td><a href=conference_stud_2015.pkl>conference_stud_2015.pkl</a><br><a href=conference_stud_2016.pkl>conference_stud_2016.pkl</a></td>
-    <td>Написать программу классификации текста по N-граммам</td>
-  </tr>
-  <tr>
-    <td><a href="https://colab.research.google.com/github/PKholyavin/year4programming/blob/main/1204.ipynb">12.04.2023</a></td>
-    <td>Наивный Байесовский классификатор</td>
-    <td></td>
-    <td>Написать программу классификации текста с помощью НБК</td>
-  </tr>
-  <tr>
-    <td><a href="https://colab.research.google.com/github/PKholyavin/year4programming/blob/main/2604.ipynb">26.04.2023</a></td>
-    <td>Tf-idf</td>
-    <td></td>
-    <td>Написать программу поиска по набору текстов</td>
-  </tr>
-</table>
 
-<p><b>Задания к экзамену</b></p>
+<h1>Программирование лингвистических задач</h1>
+<h2>2023&ndash;2024</h2>
+<p><a href="2022.html">Материалы за 2022&ndash;2023 учебный год</a></p>
+
+<p>Чтобы посмотреть ноутбук к занятию, перейдите по ссылке в графе "Дата".</p>
 
 <table border="1" cellpadding="5">
-  <tr>
-      <th>Задание</th>
-      <th>Файлы</th>
-      <th>Подробно</th>
-      <th>Кто делает</th>
-
-  </tr>
-  <tr>
-    <th colspan="4">Обработка звука</th>
-  </tr>
-  <tr>
-    <td>Вычисление мелодической деклинации</td>
-    <td>
-      <a href="cta0003.wav">cta0003.wav</a><br><a href="cta0003.seg_B1">cta0003.seg_B1</a>
-      <br><a href="cta0003.seg_Y1">cta0003.seg_Y1</a><br><a href="cta0003.seg_R2">cta0003.seg_R2</a>
-      <br><a href="https://colab.research.google.com/drive/1o4519JF7e6K2jaKbLqE4grmTXECs_1G_">REAPER</a>
-    </td>
-    <td><a href="https://colab.research.google.com/github/PKholyavin/year4programming/blob/main/attestation1.ipynb">colab</a></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Вычисление динамической деклинации</td>
-    <td></td>
-    <td><a href="https://colab.research.google.com/github/PKholyavin/year4programming/blob/main/attestation2.ipynb">colab</a></td>
-    <td>Даша</td>
-  </tr>
-  <tr>
-    <td>Классификация гласных по спектрограммам</td>
-    <td><a href="https://drive.google.com/folderview?id=1Dpjgiq4l7JrVKtJ0XfzbGtOewAURAt7C">vowels_for_class</a></td>
-    <td><a href="https://colab.research.google.com/github/PKholyavin/year4programming/blob/main/attestation4.ipynb">colab</a></td>
-    <td></td>
-  </tr>
-  <tr>
-    <th colspan="4">Обработка текста</th>
-  </tr>
-  <tr>
-    <td>Определение словосочетаний</td>
-    <td></td>
-    <td><a href="https://colab.research.google.com/github/PKholyavin/year4programming/blob/main/attestation5.ipynb">colab</a></td>
-    <td>Маша</td>
-  </tr>
-  <tr>
-    <td>Генерация текста по триграммам</td>
-    <td></td>
-    <td><a href="https://colab.research.google.com/github/PKholyavin/year4programming/blob/main/attestation6.ipynb">colab</a></td>
-    <td>Кристина</td>
-  </tr>
-  <tr>
-    <td>Дендрограмма фонемных инвентарей языков</td>
-    <td><a href="https://zenodo.org/record/2677911#.ZFIBZM5ByUk">phoible data</a></td>
-    <td><a href="https://colab.research.google.com/github/PKholyavin/year4programming/blob/main/attestation3.ipynb">colab</a></td>
-    <td></td>
-  </tr>
+    <tr>
+        <th>Дата</th>
+        <th>Темы</th>
+        <th>Файлы</th>
+        <th>Задание</th>
+    </tr>
+    <tr>
+        <th colspan="4">Семестр 1</th>
+    </tr>
+    <tr>
+        <td><a href=https://colab.research.google.com/github/PKholyavin/year4programming/blob/main/wav_reading.ipynb>03.10.2023</a></td>
+        <td>Чтение и запись файлов .wav: wav, wavio, scipy.io.wavfile</td>
+        <td>&#x1F512<a href="https://drive.google.com/file/d/1YGM4NxYwkBP98BmnRho2qvjPoKZxguRM/view?usp=share_link">n1fpt1.wav</a></td>
+        <td>Написать программу, которая:<br>
+            1 Считывает файл .wav<br>
+            2. Превращает его в стерео<br>
+            3. В правый канал кладёт отсчёты левого в обратном порядке<br>
+            4. Вставляет паузы 200 мс (или любое другое число, но явно прописанное в коде) на 1/4, 1/2 и 3/4 длительности<br>
+            5. Записывает результат в новый файл.</td>
+    </tr>
+    <tr>
+        <td><a href=https://colab.research.google.com/github/PKholyavin/year4programming/blob/main/seg_reading.ipynb>10.10.2023</a></td>
+        <td>Чтение и запись файлов .seg</td>
+        <td>&#x1F512<a href="https://drive.google.com/file/d/1Oh_QTY6NdRqBQZGjRcMpvjKJlMrNNgG0/view?usp=share_link">cta0001.zip</a></td>
+        <td>Написать модуль для чтения и записи файлов .seg. В модуле должны быть реализованы два класса:<br>
+            класс Label с полями position (целое число, положение метки в отсчётах), level (строка, формат "буква-цифра"), name (строка)<br>
+            класс Seg с методами для чтения и записи как одиночного файла .seg, так и группы файлов .seg_**
+        </td>
+    </tr>
+    <tr>
+        <td>17.10.2023</td>
+        <td>Работа с метками основного тона</td>
+        <td>
+            &#x1F512<a href="https://drive.google.com/file/d/1Oh_QTY6NdRqBQZGjRcMpvjKJlMrNNgG0/view?usp=share_link">cta0001.zip</a>
+            <a href="cta0001.pm">cta0001.pm</a>
+        </td>
+        <td>Написать программу, которая считывает из файлов .seg и .PointProcess границы периодов основного тона 
+            и строит график зависимости частоты основного тона от времени.<br>
+            Значения по оси X &mdash; временные метки в секундах с равным промежутком, который задаётся отдельной переменной. Например: [0.0, 0.01, 0.02, ...]<br>
+            Значения по оси Y &mdash; значение ЧОТ в данный момент времени, вычисленное с помощью линейной интерполяции по двум ближайшим меткам,
+            или None, если момент находится внутри глухого участка.<br>
+            Использовать программу для построения графика ЧОТ к файлу cta0001.wav. Сравнить работу автоматического детектора ЧОТ WaveAssistant, Praat с эталонными метками cta0001.seg_G1.
+        </td>
+    </tr>
 </table>
 
 <div>
-	<p>
-		<a href="https://pkholyavin.github.io/year2programming/">Основы программирования (второй курс)</a>
+<p><a href="https://pkholyavin.github.io/year2programming/">Основы программирования (второй курс)</a></p>
+<p>
+<a href="https://pkholyavin.github.io/year3programming/">Разработка и реализация алгоритмов с использованием языка Python (третий курс)</a>
+</p>
+<p>
+<a href="https://pkholyavin.github.io/mastersprogramming/">Программирование на языке Python (магистратура)</a>
+</p>    
+</div>
+
+<div>
+    <p>
+		<b>Полезные ссылки:</b>
 	</p>
+    <p>
+        <a href="https://docs.python.org/3/">Документация к языку Python</a>
+    </p>
+    <p>
+        <a href="https://openedu.ru/course/hse/PYTHONBASICS/">Основы программирования на Python (курс НИУ ВШЭ)</a>
+    </p>
+    <p>
+        <a href="https://developers.google.com/edu/python">Google's Python Class</a>
+    </p>
+    <p>
+        <a href="https://leetcode.com/">LeetCode: банк задач по программированию</a>
+    </p>
 	<p>
 		<a href="https://pkholyavin.github.io/year3programming/">Разработка и реализация алгоритмов с использованием языка Python (третий курс)</a>
 	</p>
+	<p>
+		<a href="https://pkholyavin.github.io/year4programming/">Программирование лингвистических задач (четвёртый курс)</a>
+	</p>
+    <p>
+        <a href="https://www.jetbrains.com/pycharm/">Среда разработки PyCharm</a>
+    </p>
+    <p>
+        <a href="https://code.visualstudio.com/">Среда разработки Visual Studio Code</a>
+    </p>
+    <p>
+        <a href="https://thonny.org/">Среда разработки для начинающих Thonny</a>
+    </p>
+    <p>
+        <a href="https://jupyter.org/">Jupyter Notebook</a>
+    </p>
 </div>
+<div>
+    <p>
+        <b>Список дополнительной литературы:</b>
+	</p>
+    <ol>
+    <li>Марк Лутц, Программирование на Python, 4-е изд., в 2-х т. Символ-Плюс, 2011</li>
+    <li>Марк Лутц, Изучаем Python, 4-е изд., Символ-Плюс, 2011</li>
+    <li>Б. Керниган, Р. Пайк, Практика программирования, Невский диалект, 2001</li>
+    </ol>
+</div>
+
 </body>
+
 
 </html>
