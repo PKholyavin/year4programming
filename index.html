@@ -34,10 +34,13 @@
 
 <h1>Программирование лингвистических задач</h1>
 <p><a href="https://pkholyavin.github.io">Назад</a></p>
-<h2>2023&ndash;2024</h2>
+<h2>2024&ndash;2025</h2>
 <p><a href="2022.html">Материалы за 2022&ndash;2023 учебный год</a></p>
+<p><a href="2023.html">Материалы за 2023&ndash;2024 учебный год</a></p>
 
 <p>Чтобы посмотреть ноутбук к занятию, перейдите по ссылке в графе "Дата".</p>
+
+<p>Домашние задания сдаются в виде скриптов .py.</p>
 
 <table border="1" cellpadding="5">
     <tr>
@@ -50,9 +53,13 @@
         <th colspan="4">Семестр 1</th>
     </tr>
     <tr>
-        <td><a href=https://colab.research.google.com/github/PKholyavin/year4programming/blob/main/wav_reading.ipynb>03.10.2023</a></td>
+        <td><a href=https://colab.research.google.com/github/PKholyavin/year4programming/blob/main/wav_reading_2.ipynb>01.10.2024</a></td>
         <td>Чтение и запись файлов .wav: wav, wavio, scipy.io.wavfile</td>
-        <td>&#x1F512<a title="Доступно по адресу st" href="https://drive.google.com/file/d/1YGM4NxYwkBP98BmnRho2qvjPoKZxguRM/view?usp=share_link">n1fpt1.wav</a></td>
+        <td>
+            <a href="cta0001.wav">cta0001.wav</a><br>
+            <a href="cta0001_stereo.wav">cta0001_stereo.wav</a><br>
+            <a href="cta0001.sbl">cta0001.sbl</a><br>
+        </td>
         <td>Написать программу, которая:<br>
             1 Считывает файл .wav<br>
             2. Превращает его в стерео<br>
@@ -60,165 +67,7 @@
             4. Вставляет паузы 200 мс (или любое другое число, но явно прописанное в коде) на 1/4, 1/2 и 3/4 длительности<br>
             5. Записывает результат в новый файл.</td>
     </tr>
-    <tr>
-        <td><a href=https://colab.research.google.com/github/PKholyavin/year4programming/blob/main/seg_reading.ipynb>10.10.2023</a></td>
-        <td>Чтение и запись файлов .seg</td>
-        <td>&#x1F512<a title="Доступно по адресу st" href="https://drive.google.com/file/d/1Oh_QTY6NdRqBQZGjRcMpvjKJlMrNNgG0/view?usp=share_link">cta0001.zip</a></td>
-        <td>Написать модуль для чтения и записи файлов .seg. В модуле должны быть реализованы два класса:<br>
-            класс Label с полями position (целое число, положение метки в отсчётах), level (строка, формат "буква-цифра"), name (строка)<br>
-            класс Seg с методами для чтения и записи как одиночного файла .seg, так и группы файлов .seg_**
-        </td>
-    </tr>
-    <tr>
-        <td>17.10.2023</td>
-        <td>Работа с метками основного тона</td>
-        <td>
-            &#x1F512<a title="Доступно по адресу st" href="https://drive.google.com/file/d/1Oh_QTY6NdRqBQZGjRcMpvjKJlMrNNgG0/view?usp=share_link">cta0001.zip</a><br>
-            <a href="cta0001.pm">cta0001.pm</a>
-        </td>
-        <td>Написать программу, которая считывает из файлов .seg и .PointProcess границы периодов основного тона 
-            и строит график зависимости частоты основного тона от времени.<br>
-            Значения по оси X &mdash; временные метки в секундах с равным промежутком, который задаётся отдельной переменной. Например: [0.0, 0.01, 0.02, ...]<br>
-            Значения по оси Y &mdash; значение ЧОТ в данный момент времени, вычисленное с помощью линейной интерполяции по двум ближайшим меткам,
-            или None, если момент находится внутри глухого участка.<br>
-            Использовать программу для построения графика ЧОТ к файлу cta0001.wav. Сравнить работу автоматического детектора ЧОТ WaveAssistant, Praat с эталонными метками cta0001.seg_G1.
-        </td>
-    </tr>
-    <tr>
-        <td><a href=https://colab.research.google.com/github/PKholyavin/year4programming/blob/main/spectrograms.ipynb>24.10.2023</a></td>
-        <td>Обработка сигнала окнами. Оконные фукнции.<br>Вычисление спектра сигнала. matplotlib</td>
-        <td>
-        </td>
-        <td>
-            Написать программу, которая вычисляет динамическую спектрограмму и выводит её на экран.
-        </td>
-    </tr>
-    <tr>
-        <td><a href=https://colab.research.google.com/github/PKholyavin/year4programming/blob/main/0211.ipynb>31.10.2023</a></td>
-        <td>Вычисление интенсивности.</td>
-        <td><a href="intensity.png">intensity.png</a></td>
-        <td>
-            Написать программу, которая вычисляет интенсивность звукового сигнала и выводит на экран график.
-        </td>
-    </tr>
-    <tr>
-        <td><a href=https://colab.research.google.com/github/PKholyavin/year4programming/blob/main/tgt.ipynb>07.11.2023</a></td>
-        <td>Аннотация .TextGrid</td>
-        <td>
-            &#x1F512<a title="Доступно по адресу st" href="https://drive.google.com/file/d/1jiekRvVbuZ4V5ZWJaWlIMjNFitZIB8OG/view?usp=share_link">cta_seg.zip</a><br><a href="result_example.png">result_example.png</a>
-        </td>
-        <td>
-            Написать программу, которая вычисляет длительности звуков по набору файлов .seg, проводит z-нормализацию и записывает метки звуков и информацию о нормализованной длительности в файл .TextGrid
-        </td>
-    </tr>
-    <tr>
-        <td><a href=https://colab.research.google.com/github/PKholyavin/year4programming/blob/main/parselmouth.ipynb>14.11.2023</a></td>
-        <td>Библиотека parselmouth</td>
-        <td>
-            <a href="https://drive.google.com/drive/folders/1hKROzJco5KJTG19QMxua91eOQGrZnIAo?usp=sharing">fpt1</a>
-        </td>
-        <td>
-            Написать программу, которая строит графики F1-F2 гласных по фонетически представительному тексту.
-        </td>
-    </tr>
-    <tr>
-        <td><a href=https://colab.research.google.com/github/PKholyavin/year4programming/blob/main/autocorrelation.ipynb>21-28.11.2023</a></td>
-        <td>Автокорреляция I-II</td>
-        <td>
-            <a href="https://www.fon.hum.uva.nl/paul/papers/Proceedings_1993.pdf">Proceedings_1993.pdf</a>
-        </td>
-        <td>
-            Написать программу, которая вычисляет частоту основного тона в сигнале по упрощённому алгоритму, реализованному в Praat.
-        </td>
-    </tr>
-    <tr>
-        <td><a href=https://colab.research.google.com/github/PKholyavin/year4programming/blob/main/ml_intro.ipynb>05.12.2023</a></td>
-        <td>Машинное обучение I</td>
-        <td></td>
-        <td>
-            Написать программу, которая вычисляет accuracy, precision, recall, F1-score, строит матрицу ошибок.
-        </td>
-    </tr>
-    <tr>
-        <td><a href=https://colab.research.google.com/github/PKholyavin/year4programming/blob/main/ml_2.ipynb>12.12.2023</a></td>
-        <td>Машинное обучение II</td>
-        <td></td>
-        <td>
-            Дополнить классификатор стандартизацией и восполнением данных.
-        </td>
-    </tr>
-    <tr>
-        <th colspan="4">Семестр 2</th>
-    </tr>
-    <tr>
-        <td><a href="https://colab.research.google.com/github/PKholyavin/year4programming/blob/main/2202.ipynb">17.02.2024</a></td>
-        <td>Токенизация<br>nltk</td>
-        <td></td>
-        <td>Написать программу, разбивающую текст на предложения и слова</td>
-    </tr> 
-    <tr>
-        <td><a href="https://colab.research.google.com/github/PKholyavin/year4programming/blob/main/2203.ipynb">24.02.2024</a></td>
-        <td>Стемминг<br>Лемматизация</td>
-        <td></td>
-        <td>Написать стеммер для кратких и полных прилагательных</td>
-    </tr>
-    <tr>
-        <td><a href="https://en.wikipedia.org/wiki/Levenshtein_distance#Iterative_with_full_matrix">09.03.2024</a></td>
-        <td>Расстояние Левенштейна</td>
-        <td><a href="levenshtein_paper.pdf">levenshtein_paper.pdf</a></td>
-        <td>Написать программу для вычисления расстояния Левенштейна</td>
-    </tr>
-    <tr>
-        <td><a href="https://colab.research.google.com/github/PKholyavin/year4programming/blob/main/0404.ipynb">16.03.2024</a></td>
-        <td>Исправление опечаток</td>
-        <td><a href=fontanka_freqs.txt>fontanka_freqs.txt</a></td>
-        <td>Написать программу для исправления опечаток в слове</td>
-    </tr>
-    <tr>
-        <td><a href="https://colab.research.google.com/github/PKholyavin/year4programming/blob/main/0504.ipynb">23.03.2024</a></td>
-        <td>N-граммы</td>
-        <td>
-            <a href="https://docs.google.com/presentation/d/1UY9dNtwXp5Z4f3oQmLZfajL0aRgkGu79/edit?usp=drive_link">Презентация</a><br>
-            <a href="https://web.stanford.edu/~jurafsky/slp3/3.pdf">Speech and Language Processing: N-grams</a><br>
-
-            <a href=conference_stud_clean.pkl>conference_stud_clean.pkl</a><br>
-            <a href=conference_march.pkl>conference_march.pkl</a>
-        </td>
-        <td>Написать программу классификации текста по N-граммам</td>
-    </tr>
-        <td><a href="https://colab.research.google.com/github/PKholyavin/year4programming/blob/main/1204.ipynb">30.03.2024</a></td>
-        <td>Наивный Байесовский классификатор</td>
-        <td></td>
-        <td>Написать программу классификации текста с помощью НБК</td>
-    </tr>
-    <tr>
-        <td><a href="https://colab.research.google.com/github/PKholyavin/year4programming/blob/main/2604.ipynb">06.04.2024</a></td>
-        <td>Tf-idf</td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a href="https://colab.research.google.com/github/PKholyavin/year4programming/blob/main/w2v.ipynb">06.04.2024</a></td>
-        <td>word2vec</td>
-        <td></td>
-        <td>Написать программу поиска по набору текстов с помощью word2vec</td>
-    </tr>
-    <tr>
-        <td><a href="https://colab.research.google.com/github/PKholyavin/year4programming/blob/main/misc.ipynb">13.04.2024</a></td>
-        <td>Закон Ципфа. Энтропия</td>
-        <td></td>
-        <td></td>
-    </tr>
 </table>
-
-<p>Зачётное задание (откроется с началом зачёта):</p>
-<a href="https://docs.google.com/document/d/12gnWBMXsSFHad4sYSXqCfuvCfhE4spRIMZ3Q2cG8HwI/edit?usp=sharing">Google Docs</a>
-
-<p>Задание на пересдачу (откроется с началом пересдачи):</p>
-<a href="https://docs.google.com/document/d/1PNv5jG4-Vk5jZfZ5yUKepkoWFSCQCwYl_iFzN9zZ6LM/edit?usp=sharing">Google Docs</a>
-
-<p>Экзаменационные задания:</p>
-<a href="https://colab.research.google.com/github/PKholyavin/year4programming/blob/main/exam_2024.ipynb">Google Colab</a>
 
 <div>
     <p>
